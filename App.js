@@ -7,6 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from "./src/Screens/Home";
 import Cadastro from "./src/Screens/Cadastro";
 import Lista from "./src/Screens/Lista";
+import Noti from "./src/Screens/Noti";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -47,6 +48,7 @@ export default class App extends Component {
         <Stack.Navigator initialRouteName="Tabs">
           <Stack.Screen name="Home" component={Tabs} options={{ headerShown: false }} />
           <Stack.Screen name="Cadastro" component={Cadastro} />
+          <Stack.Screen name="Noti" component={Noti} />
         </Stack.Navigator>
       </NavigationContainer>
     )

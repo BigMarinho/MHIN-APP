@@ -15,7 +15,7 @@ export default function Home({ navigation }) {
 
     const renderItem = ({ item }) => {
         return (
-            <TouchableOpacity onPress={() => navigation.navigate('Cadastro', { ingresso: item })}>
+            <TouchableOpacity onPress={() => navigation.navigate('Noti', { ingresso: item })}>
                 <View style={[styles.ingressoContainer, { width: INGRESSO_WIDTH }]}>
                     <Image source={{ uri: item.imagem }} style={styles.ingressoImagem} />
                     <Text style={styles.ingressoNome}>{item.nome}</Text>

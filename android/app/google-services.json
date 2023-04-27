@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "551506307849",
+    "project_id": "mhin-67dd9",
+    "storage_bucket": "mhin-67dd9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551506307849:android:ef498ce0a26650b3cf81d8",
+        "android_client_info": {
+          "package_name": "com.sqlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "551506307849-esgmtscta8gflqo2onv7k08eo98bnd16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIO8k2YAiScxNeI6nqFa-HOxF7yfFIlBk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "551506307849-esgmtscta8gflqo2onv7k08eo98bnd16.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
