@@ -1,11 +1,26 @@
 import React from 'react';
-import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet, FlatList, Dimensions, SafeAreaView } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet, FlatList, Dimensions, SafeAreaView, Button } from 'react-native';
 import Navibar from '../Components/Navibar';
 import Carrossel from '../Components/Carrossel';
+import { Notification } from '../Components/NotificationConfig.js';
+
 
 const INGRESSO_WIDTH = (Dimensions.get('window').width / 2) - (15 * 2.2);
+const notificador = Notification
+
 
 export default function Home({ navigation }) {
+
+    onPressSendNotification = () => {
+        notificador.showNotification(
+          1,
+          "Parabéns! Você ganhou um desconto!",
+          "Apresente o código \"B43IKS9\" na entrada e ganhe 10% de desconto no seu ingresso.",
+          {}, // data
+          {} // options
+        )
+      }
+
     const lista = [
         { id: 1, nome: "0-12 anos", preco: "R$ 12,90", imagem: "https://img.freepik.com/fotos-gratis/criancas-sorridentes-de-tiro-medio-posando-juntas_23-2149073581.jpg?w=2000" },
         { id: 2, nome: "13-18 anos", preco: "R$ 16,90", imagem: "https://www.pfizer.com.br/images/custom/meningite-em-adolescentes.jpg" },
@@ -37,6 +52,12 @@ export default function Home({ navigation }) {
                 renderItem={renderItem}
                 contentContainerStyle={styles.flatListContainer}
             />
+            <TouchableOpacity
+                style={styles.button}
+                onPress={this.onPressSendNotification}
+            >
+                <Text style={{color:'#fff'}}>GANHAR DESCONTO!</Text>
+            </TouchableOpacity>
         </ScrollView>
     )
 }
@@ -80,5 +101,15 @@ const styles = StyleSheet.create({
         marginVertical: 20,
         fontWeight: 'bold',
         alignSelf: 'center'
+    },
+    button: {
+        alignSelf: "center",
+        alignItems: 'center',
+        backgroundColor: '#DDDDDD',
+        padding: 10,
+        width: 200,
+        marginTop: 10,
+        backgroundColor: "#458a42",
+        marginBottom: 40
     }
 })
