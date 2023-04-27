@@ -92,7 +92,7 @@ const estilo = StyleSheet.create({
     textAlign: "center",
     marginBottom: 5,
     marginTop: 40,
-    color: "#000"
+    color: "#000000"
   },
   botaoAtualizar: {
     fontWeight: 'bold',
