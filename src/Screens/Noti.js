@@ -21,6 +21,7 @@ export default class App extends Component {
     
     componentDidMount() {
       notificador.configure();
+      notificador.createChannel();
     }
 
     onPressSendNotification = () => {

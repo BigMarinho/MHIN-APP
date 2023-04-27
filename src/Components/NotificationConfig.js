@@ -22,6 +22,7 @@ class NotificationManager {
     // É aqui que nossa notificação para o Android é construida
     buildAndroidNotification = (id, title, message, data = {}, options = {}) => {
         return {
+            channelId: "my-channel",
             id: id,
             autoCancel: true,
             largeIcon: options.largeIcon || "ic_launcher",
@@ -54,6 +55,18 @@ class NotificationManager {
     // Função que cancela todas notiificações e limpa as que estão no centro de notificações
     cancelAllLocalNotification = () => {
         PushNotification.cancelAllLocalNotifications();
+    }
+
+    createChannel = () => {
+        PushNotification.createChannel(
+            {
+                channelId: "my-channel", // (required)
+                channelName: "My channel", // (required)
+                channelDescription: "A channel to categorise your notifications", // (optional) default: undefined.
+                vibrate: true,
+            },
+            (created) => console.log(`createChannel returned '${created}'`) // (optional) callback returns whether the channel was created, false means it already existed.
+        );
     }
 
 }
